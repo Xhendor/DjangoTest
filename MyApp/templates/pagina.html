@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+{% load static %}
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +8,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css">
+  <link rel="stylesheet" href="{% static 'css/mi_estilo.css' %}">
+
   <title> {% block titulo %}{%endblock titulo %}</title>
 </head>
 
 <body>
+      <img src="{% static 'img/joker.jpeg' %}"/>
     {% block contenido %}asdasdasd{% endblock contenido %}
 
 
