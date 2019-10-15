@@ -2,7 +2,11 @@
 
 {% block titulo %}Estoy heredando{% endblock %}
 
-{% block contenido %}<center><h1 style="font-size:30px">Soy un contenido</center></h1>{% endblock %}
+{% block contenido %}<center><h1 style="font-size:30px">
 
+  {% for board in posts %}
 
-{% block eldiv %}Soy el texto del archivo que hereda{% endblock %}
+        {{ board.name }}
+
+  {% endfor %}
+</center></h1>{% endblock %}
