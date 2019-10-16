@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Login{% endblock %}
+{% block content %}
+
+<div style="text-align:center"><h2>Login</h2></div>
+<div style="text-align:center">
+
+  <form method="post" id="form_login">
+    {% csrf_token %}
+    {% if usuario is not none %}
+    {{ usuario.email }}
+    {% endif %}
+
+    <button type="submit">Login</button>
+  </form></div>
+{% endblock %}

@@ -1,12 +1,7 @@
 from django.shortcuts import render
-from array import *
 from django.http import HttpResponse
-
-from .models import Board
+from django.contrib.auth.models import User
 
 def index(request):
-    data = Board.objects.all()
-    return render(request, 'paginaRevenge.html',{'posts': data})
-
-def otra(request):
-    return render(request, 'otra.html',{})
+  coco=User.objects.get(username='rosendo')
+  return render(request, 'home.html', {'usuario':coco})
